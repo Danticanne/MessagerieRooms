@@ -81,3 +81,9 @@ socket.on('left', (leftUn) => {
     var idleft = '#' + leftUn.toString()
     $(idleft).remove()
 })
+
+//bouton quitter est appuyé
+
+function leaveRoom() {
+    document.location.href = "/"
+}
