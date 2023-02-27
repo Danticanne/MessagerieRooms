@@ -4,13 +4,15 @@ console.log(username)
 
 //signaler qu'il y a un nouvel utilisateur
 
-socket.emit('joined', username)
+socket.emit('joined', username, room)
 
 //event quand utilisateur rejoint
 
 socket.on('justJoined', (Users) => {
     Users.forEach(element => {
-        newUser(element.un)
+        if(element.room == room){
+            newUser(element.un)
+        }
     });
 })
 
@@ -71,8 +73,10 @@ function newUser(username) {
 
 //event nouvel utilisateur, afficher 
 
-socket.on('newUser', (username) => {
-    newUser(username)
+socket.on('newUser', (pseudo, roomS) => {
+    if(roomS == room){
+        newUser(pseudo)
+    }
 })
 
 //quitté

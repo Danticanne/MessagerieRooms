@@ -15,7 +15,7 @@
         <div id="div2">
             <textarea type="text" id="messageInput" placeholder="ecrivez un message !"></textarea>
             <button id="boutonSend" onclick="sendMessage()">envoyer</button>
-            <p id="infoRoom">connecté dans la room ... en tant que <%= username %></p>
+            <p id="infoRoom">connecté dans la room <%= room %> en tant que <%= username %></p>
             <button id="quitRoom" onclick="leaveRoom()">quitter la room</button>
         </div>
         <div id="div3">
@@ -29,6 +29,7 @@
     <script src="/modules/animejs/lib/anime.min.js"></script>
     <script>
         var username = <%- JSON.stringify(username) %>  
+        var room = <%- JSON.stringify(room) %> 
     </script>
     <script src="script/script.js"></script>
 </body>

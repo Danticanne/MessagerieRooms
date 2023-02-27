@@ -14,7 +14,9 @@
     </div>
     <form id="mainContainer" action="/messagerie" method="POST">
         <p>entrez un pseudo :</p>
-        <input type="text" id="usernameInput" class="inputText" name="username">
+        <input type="text" id="usernameInput" class="inputText" name="username" placeholder="pseudo">
+        <p>Dans la room :</p>
+        <input type="text" id="RoomInput" class="inputText" name="room"  placeholder="nom de la room">
         <button class="bouton" id="buttonConnect">Se connecter</button>
     </form>
     <script src="/modules/socket.io/client-dist/socket.io.min.js"></script>

@@ -18,7 +18,7 @@ app.get("/", (req, res) => {
 })
 
 app.post("/messagerie", (req, res) => {
-    res.render('messagerie.ejs', {username: req.body.username})
+    res.render('messagerie.ejs', {username: req.body.username, room: req.body.room})
 })
 
 //pour chaque connexion
@@ -26,15 +26,17 @@ app.post("/messagerie", (req, res) => {
 io.on("connection", (socket) => {
 
     socket.on("sendMessage", (user, content) => {
-        io.emit('newMessage', user, content)
+        io.in(socket.room).emit('newMessage', user, content)
     })
 
-    socket.on('joined', (username) => {
+    socket.on('joined', (username, room) => {
         console.log(username)
         socket.pseudo = username
-        Users.push({id : socket.id, un : socket.pseudo})
+        socket.room = room
+        Users.push({id : socket.id, un : socket.pseudo, room : socket.room})
         console.log(Users)
-        io.emit('newUser', username)
+        socket.join(room)
+        io.emit('newUser', socket.pseudo, socket.room)
     })
 
     socket.on('disconnect', () => {
