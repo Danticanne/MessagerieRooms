@@ -21,7 +21,7 @@ app.post("/messagerie", (req, res) => {
     res.render('messagerie.ejs', {username: req.body.username})
 })
 
-//pour chaque connection
+//pour chaque connexion
 
 io.on("connection", (socket) => {
 
