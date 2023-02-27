@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>connexion</title>
+    <link href="style/style.css" rel="stylesheet">
+    <link href="style/styleConn.css" rel="stylesheet">
+</head>
+<body>
+    <div id="presentation">
+        <h1>Bienvenue sur Rooms</h1>
+    </div>
+    <form id="mainContainer" action="/messagerie" method="POST">
+        <p>entrez un pseudo :</p>
+        <input type="text" id="usernameInput" class="inputText" name="username">
+        <button class="bouton" id="buttonConnect">Se connecter</button>
+    </form>
+    <script src="/modules/socket.io/client-dist/socket.io.min.js"></script>
+    <script src="/modules/jquery/dist/jquery.min.js"></script>
+    <script src="/modules/animejs/lib/anime.min.js"></script>
+    <script src="script/scriptConn.js"></script>
+</body>
+</html>

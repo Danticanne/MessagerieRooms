@@ -1,0 +1,154 @@
+@font-face {
+    font-family: 'Raleway';
+    src: url("./Raleway-Bold.ttf");
+}
+
+body{
+    overflow: hidden;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Raleway';
+}
+
+#container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    height: 100vh;
+    width: 100vw;
+}
+    
+#div1 { 
+    grid-area: 1 / 1 / 5 / 5; 
+    background-color: rgb(255, 238, 207);
+    overflow-y: auto;
+}
+.message{
+    width: 100%;
+    background-color: wheat;
+    display: flex;
+    border-bottom: 2px solid rgb(203, 185, 152);
+}
+.usernameDiv{
+    padding: 5px;
+    background-color: rgb(254, 242, 219);
+}
+.contentDiv{
+    padding: 5px;
+}
+
+
+#div2 { 
+    grid-area: 5 / 1 / 6 / 6; 
+    background-color: wheat;
+    padding: 10px;
+    padding-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    border-top: 2px solid rgb(203, 185, 152);
+}
+#messageInput{
+    width: calc(75vw - 15px);
+    border: 2px brown solid;
+    border-radius: 3px;
+    padding: 3px;
+    box-shadow: 7px 7px 0px 0px rgba(0,0,0,0.1);
+    background-color: rgb(241, 228, 203);
+    height: 50px;
+    resize: none;
+    outline: none;
+    margin: 5px;
+    position: relative;
+    transition: 0.5s;
+}
+#boutonSend{
+    width: 60px;
+    height: 60px;
+    margin: 5px;
+    position: relative;
+    border: 2px brown solid;
+    background-color: rgb(241, 228, 203);
+    box-shadow: 7px 7px 0px 0px rgba(0,0,0,0.1);
+    border-radius: 3px;
+    margin-left: 15px;
+    transition: 0.75s;
+}
+#infoRoom{
+    margin: 5px;
+    margin-top: 10px;
+}
+#quitRoom{
+    height: 30px;
+    margin: 5px;
+    padding: 4px;
+    position: relative;
+    border: 2px brown solid;
+    background-color: rgb(241, 228, 203);
+    box-shadow: 7px 7px 0px 0px rgba(0,0,0,0.1);
+    border-radius: 3px;
+    margin-left: 15px;
+    transition: 0.75s;
+}
+#messageInput:hover{
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.1);
+    transform: translate(3px, 3px);
+}
+#boutonSend:hover{
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.1);
+    transform: translate(5px, 5px);
+}
+#quitRoom:hover{
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.1);
+    transform: translate(5px, 5px);
+}
+
+#div3 { 
+    grid-area: 1 / 5 / 5 / 6; 
+    background-color: rgb(255, 214, 138);
+    border-left: 2px solid rgb(203, 185, 152);
+}
+.userBox{
+    width: calc(100% - 10px);
+    padding: 5px;
+    background-color: rgb(248, 227, 187);
+    border-bottom: 2px solid rgb(203, 185, 152);
+}
+
+/*style global utilisé sur toutes les pages*/
+
+.bouton{
+    margin: 5px;
+    position: relative;
+    border: 2px brown solid;
+    background-color: rgb(241, 228, 203);
+    box-shadow: 7px 7px 0px 0px rgba(0,0,0,0.1);
+    border-radius: 3px;
+    transition: 0.75s;
+}
+.bouton:hover{
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.1);
+    transform: translate(5px, 5px);
+}
+
+.inputText{
+    border: 2px rgb(105, 43, 20) solid;
+    border-radius: 3px;
+    padding: 3px;
+    box-shadow: 7px 7px 0px 0px rgba(0,0,0,0.1);
+    background-color: wheat;
+    height: 50px;
+    resize: none;
+    outline: none;
+    margin: 5px;
+    position: relative;
+    transition: 0.5s;
+}
+.inputText:hover{
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.1);
+    transform: translate(5px, 5px);
+}
